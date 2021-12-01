@@ -23,8 +23,8 @@ const headingElement = `
 
 const inputElement = (type, name, labelText) => { 
     return `
-    <div>
-        <label>${labelText}</label>
+    <div id="${name}InputDiv">
+        <label for="${name}">${labelText}</label>
         <input type="${type}" name="${name}">
     </div>
     `;
@@ -40,8 +40,8 @@ const selectElement = (type, name, labelText, options) => {
     }
 
     return `
-    <div>
-        <label>${labelText}</label>
+    <div id="${name}InputDiv">
+        <label for="${name}">${labelText}</label>
         <${type} name="${name}">
             ${optionsToSelect}
         </${type}>

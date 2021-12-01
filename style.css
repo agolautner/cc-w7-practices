@@ -96,6 +96,9 @@ h1 {
 
 form {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 input {
@@ -125,10 +128,52 @@ input[type='file'] {
     border: 2px dashed #56A3A6;
     opacity: 1;
 }
-
-input[type='radio'], input[type='select'], input[type='checkbox'] {
-    margin-left: 20px;
+#firstNameInputDiv {
+    width: 100%;
 }
+
+#personalEmailInputDiv {
+    width: 100%;
+}
+
+#profilePictureInputDiv {
+    width: 100%;
+}
+
+#newsletterInputDiv {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+
+    width: 80%;
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+#termsInputDiv {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    width: 80%;
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+
+#whereInputDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 80%;
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+/* input[type='radio'], input[type='select'], input[type='checkbox'] {
+    margin-left: 20px;
+} */
 
 button {
     position: absolute;
