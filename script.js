@@ -15,6 +15,11 @@ ARROW FUNCTION
 const functionName = () => {};
 functionName();
 */
+const headingElement = `
+    <div id="heading-div">
+        <h1>REGISZTRÁCIÓ</h1>
+    </div>
+`;
 
 const inputElement = (type, name, labelText) => { 
     return `
@@ -47,11 +52,11 @@ const selectElement = (type, name, labelText, options) => {
 const formElement = `
     <form id="form">
         ${inputElement('text', 'firstName', 'Keresztneved')}
-        ${inputElement('file', 'profilePicture', 'Profilképed')}
         ${inputElement('email', 'personalEmail', 'Email címed')}
-        ${inputElement('radio', 'newsletter', 'Hírlevelet szeretnél kapni')}
-        ${inputElement('checkbox', 'terms', 'Elfogadod a felhasználási feltételeket')}
-        ${selectElement('select', 'where', 'Hol hallottál rólunk', ['interneten','ismerőstől', 'egyéb'])}
+        ${inputElement('file', 'profilePicture', 'Profilképed')}
+        ${inputElement('radio', 'newsletter', 'Szeretnék feliratkozni a hírlevélre.')}
+        ${inputElement('checkbox', 'terms', 'Megismertem és elfogadom a felhasználási feltételeket, valamint az adatkezelési tájékozatót.')}
+        ${selectElement('select', 'where', 'Hol hallottál rólunk?', ['interneten','ismerőstől', 'egyéb'])}
         <button>OK</button>
     </form>
 `;
@@ -76,9 +81,10 @@ const inputUpdate = (event) => {
 function loadEvent() {
     const root = document.getElementById('root');
     root.insertAdjacentHTML('afterbegin', formElement);
-    root.insertAdjacentHTML('afterbegin', `
-        <div id="inputValue"></div>
-    `);
+    root.insertAdjacentHTML('afterbegin', headingElement);
+    // root.insertAdjacentHTML('afterbegin', `
+    //     <div id="inputValue"></div>
+    // `);
 
     const form = document.getElementById('form');
     form.addEventListener('submit', formSubmit);
