@@ -98,6 +98,17 @@ form {
     text-align: center;
 }
 
+input {
+    box-sizing: border-box;
+}
+
+input:focus {
+    background-color: #C0D8E0;
+    border: 2px solid #56A3A6;
+    border-radius: 3px;
+    outline: none;
+}
+
 input[type='text'], input[type='email'], input[type='file'] {
     margin-bottom: 20px;
 }
