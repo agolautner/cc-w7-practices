@@ -51,7 +51,6 @@ body {
     height: 100vh;
     background-color: #C0D8E0;
 
-    font-family: 'Quicksand', sans-serif;
     font-family: 'Varela Round', sans-serif;
 }
 
@@ -103,6 +102,9 @@ form {
 
 input {
     box-sizing: border-box;
+
+    font-size: 15px;
+    font-family: 'Varela Round', sans-serif;
 }
 
 input:focus {
@@ -110,6 +112,8 @@ input:focus {
     border: 2px solid #56A3A6;
     border-radius: 3px;
     outline: none;
+
+    font-family: 'Varela Round', sans-serif;
 }
 
 input[type='text'], input[type='email'], input[type='file'] {
