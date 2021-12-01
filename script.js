@@ -43,8 +43,9 @@ const formSubmit = (event) => {
 }
 
 const inputUpdate = (event) => {
-    //csak akkor fusson ez le, ha a firstname input mezot hasznaljuk
-    document.getElementById('inputValue').innerHTML = event.target.value;
+    if(event.target.getAttribute('name') === 'firstName'){
+        document.getElementById('inputValue').innerHTML = event.target.value;
+    }
 }
 
 function loadEvent() {
