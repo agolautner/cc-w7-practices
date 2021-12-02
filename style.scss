@@ -1,0 +1,233 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+  
+    background: transparent;
+  
+    font-family: inherit;
+    
+    text-decoration: none;
+  }
+  
+ol, ul, li {
+    list-style:none;
+    display:block;
+}
+  
+table {
+    border-collapse:collapse;
+    border-spacing:0
+}
+  
+a img {
+    border: none
+}
+  
+button, a {
+    cursor: pointer;
+    color: inherit
+}
+  
+textarea {
+    resize: none
+}
+  
+button, input, textarea, select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    border-radius: 0
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #C0D8E0;
+
+    font-family: 'Varela Round', sans-serif;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+
+    width: 400px;
+    height: 650px;
+    /* padding: 20px; */
+
+    border-radius: 5px;
+    background-color: white;
+}
+
+#heading-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 80px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    border-radius: 5px 5px 0 0;
+    background-color: #56A3A6;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+}
+
+form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form div.file {
+    position: relative;
+    height: 80px;
+    background-color: #56A3A6;
+
+    &::after {
+        content: 'kattints vagy húzd ide a fájlodat';
+        font-weight: 200;
+        display: block;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+
+        padding-top: 20px;
+
+        text-align: center;
+    }
+
+    input[type="file"] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+input {
+    box-sizing: border-box;
+
+    font-size: 15px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+input:focus {
+    background-color: #C0D8E0;
+    border: 2px solid #56A3A6;
+    border-radius: 3px;
+    outline: none;
+
+    font-family: 'Varela Round', sans-serif;
+}
+
+input[type='text'], input[type='email'], input[type='file'] {
+    margin-bottom: 20px;
+}
+
+input[type='text'], input[type='email'] {
+    width: 90%;
+    height: 50px;
+}
+
+input[type='file'] {
+    width: 90%;
+    height: 50px;
+
+    border: 2px dashed #56A3A6;
+    opacity: 1;
+}
+#firstNameInputDiv {
+    width: 100%;
+}
+
+#personalEmailInputDiv {
+    width: 100%;
+}
+
+#profilePictureInputDiv {
+    width: 100%;
+}
+
+#newsletterInputDiv {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+
+    width: 80%;
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+#termsInputDiv {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    width: 80%;
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+
+#whereInputDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 80%;
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+/* input[type='radio'], input[type='select'], input[type='checkbox'] {
+    margin-left: 20px;
+} */
+
+button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 50px;
+    background-color: #56A3A6;
+    color: white;
+    border: none;
+}
+
+#inputValue img {
+    width: 200px;
+    height: 200px;
+    
+    position: fixed;
+    left: 0;
+    top: 0;
+}
