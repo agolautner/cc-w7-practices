@@ -1,5 +1,5 @@
 /*
-NOV 30 PRACTICE
+DEC 3 PRACTICE
 
 NORMAL FUNCTION
 function functionName(){
@@ -118,6 +118,10 @@ const formFields = [
         <button>OK</button>
     </form>
 `; */
+
+const selectFields = {
+
+};
 
 const formElement = (ffs, id) => {
     let inputs = '';
